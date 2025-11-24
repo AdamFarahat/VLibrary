@@ -1,5 +1,5 @@
-// ...existing code...
 using UnityEngine;
+using UnityEngine.XR;
 
 public class EbookCameraFollow : MonoBehaviour
 {
@@ -15,42 +15,44 @@ public class EbookCameraFollow : MonoBehaviour
 
     // If true, force the Canvas to World Space in Awake
     public bool forceWorldSpace = true;
-    // If another system is reparenting this object after Start, enable this
-    public bool forceUnparentEveryFrame = false;
 
     // Helpful debug info
     public bool debugLogs = false;
 
+    // Input state
+    XRNode inputNode = XRNode.RightHand;
+    bool prevPrimary = false;
+
     void Awake()
-{
-    ebookCanvas = GetComponent<Canvas>();
-    if (ebookCanvas == null)
     {
-        Debug.LogWarning("EbookCameraFollow: No Canvas component found on this GameObject.");
-    }
-    else if (forceWorldSpace)
-    {
-        if (ebookCanvas.renderMode != RenderMode.WorldSpace)
+        ebookCanvas = GetComponent<Canvas>();
+        if (ebookCanvas == null)
         {
-            
-            // ensure no negative scale
-            ebookCanvas.transform.localScale = Vector3.one;
+            Debug.LogWarning("EbookCameraFollow: No Canvas component found on this GameObject.");
         }
-        if (Camera.main != null)
-            ebookCanvas.worldCamera = Camera.main;
+        else
+        {
+            if (forceWorldSpace)
+            {
+                ebookCanvas.renderMode = RenderMode.WorldSpace;
+                if (Camera.main != null)
+                    ebookCanvas.worldCamera = Camera.main;
+            }
+
+            // ensure positive scale and default rotation
+            ebookCanvas.transform.localScale = new Vector3(Mathf.Abs(ebookCanvas.transform.localScale.x),
+                                                           Mathf.Abs(ebookCanvas.transform.localScale.y),
+                                                           Mathf.Abs(ebookCanvas.transform.localScale.z));
+            ebookCanvas.transform.localRotation = Quaternion.identity;
+        }
+
+        // keep the object unparented so camera movement doesn't automatically move it
+        transform.SetParent(null);
     }
-
-    ebookCanvas.renderMode = RenderMode.WorldSpace;
-    // don't flip the canvas — keep default rotation so text isn't reversed
-    ebookCanvas.transform.localRotation = Quaternion.identity;
-
-    // Unparent early so local parenting won't override position
-    transform.SetParent(null);
-}
 
     void Start()
     {
-        // Try main camera first, otherwise pick the first enabled camera
+        // find camera
         Camera cam = Camera.main;
         if (cam == null)
         {
@@ -69,39 +71,53 @@ public class EbookCameraFollow : MonoBehaviour
             cameraTransform = cam.transform;
         else
             Debug.LogWarning("EbookCameraFollow: No camera found. Tag your camera as MainCamera or assign one.");
+
+        // Position once at start
+        PositionInFront();
     }
 
-    void LateUpdate()
+    void Update()
+    {
+        // Read primary button (A on right Quest) and trigger a reposition on rising edge
+        InputDevice device = InputDevices.GetDeviceAtXRNode(inputNode);
+        bool primary = false;
+        if (device.isValid)
+        {
+            device.TryGetFeatureValue(CommonUsages.primaryButton, out primary);
+        }
+
+        if (primary && !prevPrimary)
+        {
+            // A pressed -> reposition in front of camera
+            PositionInFront();
+            if (debugLogs) Debug.Log("EbookCameraFollow: A pressed - repositioned canvas.");
+        }
+
+        prevPrimary = primary;
+    }
+
+    void PositionInFront()
     {
         if (cameraTransform == null) return;
 
-        if (forceUnparentEveryFrame)
-            transform.SetParent(null);
-
-        // Ensure root and canvas scales are positive to avoid mirrored UI
-        Vector3 rootScale = transform.localScale;
-        transform.localScale = new Vector3(Mathf.Abs(rootScale.x), Mathf.Abs(rootScale.y), Mathf.Abs(rootScale.z));
-        Vector3 canvasScale = ebookCanvas != null ? ebookCanvas.transform.localScale : Vector3.one;
+        // ensure positive scales to avoid mirrored text
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y), Mathf.Abs(transform.localScale.z));
         if (ebookCanvas != null)
-            ebookCanvas.transform.localScale = new Vector3(Mathf.Abs(canvasScale.x), Mathf.Abs(canvasScale.y), Mathf.Abs(canvasScale.z));
+            ebookCanvas.transform.localScale = new Vector3(Mathf.Abs(ebookCanvas.transform.localScale.x), Mathf.Abs(ebookCanvas.transform.localScale.y), Mathf.Abs(ebookCanvas.transform.localScale.z));
 
+        // place in front of the camera
         Vector3 targetPos = cameraTransform.position + cameraTransform.forward * distance + cameraTransform.up * verticalOffset;
         transform.position = targetPos;
 
         if (faceCamera)
         {
-            // Face the camera while keeping canvas upright using camera's up vector
-            transform.rotation = Quaternion.LookRotation(transform.position - cameraTransform.position, cameraTransform.up);
+            // Look at camera then flip 180 so the visible face is correct
+            transform.LookAt(cameraTransform.position, cameraTransform.up);
+            transform.Rotate(0f, 180f, 0f, Space.Self);
         }
         else
         {
             transform.rotation = cameraTransform.rotation;
-        }
-
-        if (debugLogs)
-        {
-            float actualDistance = Vector3.Distance(cameraTransform.position, transform.position);
-            Debug.Log($"EbookCameraFollow: targetDistance={distance:F2}, actualDistance={actualDistance:F2}, pos={transform.position}");
         }
     }
 
