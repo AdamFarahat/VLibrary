@@ -2,9 +2,10 @@
 using UnityEngine.UI;
 using System.Collections;
 using UEPub;
+using TMPro;
 
 public class EbookRenderer : MonoBehaviour {
-	public Text displayText;
+	public TextMeshProUGUI displayText;
 	public TextAsset testBook;
 
 	//private EpubBook epubBook;

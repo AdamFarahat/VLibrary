@@ -464,7 +464,7 @@ PrefabInstance:
         type: 3}
       propertyPath: displayText
       value: 
-      objectReference: {fileID: 961242861}
+      objectReference: {fileID: 1825107968}
     - target: {fileID: 8973621742445337354, guid: aef726aebd61eac4db4d9b01cf2e723f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1624,6 +1624,81 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2559936577488922339, guid: 83522b00ec288484ba163b6ff9ae96b1,
+        type: 3}
+      propertyPath: m_text
+      value: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+        ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus
+        duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
+        fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada
+        lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti
+        sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+        
+
+        Lorem
+        ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
+        vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
+        Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+        nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
+        torquent per conubia nostra inceptos himenaeos.
+
+        
+
+        Lorem
+        ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
+        vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
+        Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+        nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
+        torquent per conubia nostra inceptos himenaeos.
+
+        
+
+        Lorem
+        ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
+        vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
+        Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+        nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
+        torquent per conubia nostra inceptos himenaeos.
+
+        
+
+        Lorem
+        ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
+        vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
+        Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+        nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+        nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
+        torquent per conubia nostra inceptos himenaeos.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559936577488922339, guid: 83522b00ec288484ba163b6ff9ae96b1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559936577488922339, guid: 83522b00ec288484ba163b6ff9ae96b1,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 4.5183334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559936577488922339, guid: 83522b00ec288484ba163b6ff9ae96b1,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 5.141922
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559936577488922339, guid: 83522b00ec288484ba163b6ff9ae96b1,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559936577488922339, guid: 83522b00ec288484ba163b6ff9ae96b1,
+        type: 3}
+      propertyPath: m_horizontalMapping
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6200506243049821218, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
       propertyPath: m_Camera
@@ -1677,12 +1752,12 @@ PrefabInstance:
     - target: {fileID: 6933218739711514534, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0018512467
+      value: 0.00971626
       objectReference: {fileID: 0}
     - target: {fileID: 6933218739711514534, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.002724328
+      value: 0.008910244
       objectReference: {fileID: 0}
     - target: {fileID: 6933218739711514534, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
@@ -1722,12 +1797,12 @@ PrefabInstance:
     - target: {fileID: 6933218739711514534, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.78
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 6933218739711514534, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.57
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: 6933218739711514534, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
@@ -1744,14 +1819,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1229411565043518409, guid: 83522b00ec288484ba163b6ff9ae96b1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6825582341954790452, guid: 83522b00ec288484ba163b6ff9ae96b1,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1280320736}
+      addedObject: {fileID: 1280320741}
+    - targetCorrespondingSourceObject: {fileID: 6825582341954790452, guid: 83522b00ec288484ba163b6ff9ae96b1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1280320746}
   m_SourcePrefab: {fileID: 100100000, guid: 83522b00ec288484ba163b6ff9ae96b1, type: 3}
 --- !u!1 &712900736
 GameObject:
@@ -2948,25 +3028,13 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &961242861 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9048116535005412430, guid: 83522b00ec288484ba163b6ff9ae96b1,
-    type: 3}
-  m_PrefabInstance: {fileID: 693783466}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1280320731 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6825582341954790452, guid: 83522b00ec288484ba163b6ff9ae96b1,
     type: 3}
   m_PrefabInstance: {fileID: 693783466}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1280320736
+--- !u!114 &1280320741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2984,6 +3052,25 @@ MonoBehaviour:
   forceWorldSpace: 1
   forceUnparentEveryFrame: 0
   debugLogs: 0
+--- !u!114 &1280320746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280320731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1313711679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,6 +3425,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1825107968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559936577488922339, guid: 83522b00ec288484ba163b6ff9ae96b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 693783466}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &2030460164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4005214231553498965, guid: 60e0d464df6751746a460a58f5c38da9,
