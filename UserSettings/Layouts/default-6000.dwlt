@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 16
+  controlID: 51
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 52
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 53
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -353,7 +353,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -363,16 +363,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\farah\OneDrive\Desktop\VREducationBuilds\VLibrary\VLibrary
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 6}
-    m_SelectedIDs: a8ce0000
-    m_LastClickedID: 52904
-    m_ExpandedIDs: 000000000ec30000
+    scrollPos: {x: 0, y: 62}
+    m_SelectedIDs: 3cc30000
+    m_LastClickedID: 49980
+    m_ExpandedIDs: 00000000c4c20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -401,7 +401,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000ec30000
+    m_ExpandedIDs: 00000000c4c20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300006cad000000000000e6e700009cac0000a8bc0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 86a3ffffeca9fffff0a9ffff0caeffff18aeffff84b2ffffd4c3ffffd6c3ffff12fbfffff4ffffff52c00000f2d60000
+      m_ExpandedIDs: 12fbfffff6bf000024c0000050c0000056c000005cc000007ac00000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1100,9 +1100,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.7893646, y: 1.9794707, z: 0.9443631}
+    m_Target: {x: 58.23305, y: -2.2244923, z: -4.116186}
     speed: 2
-    m_Value: {x: 19.3234, y: -1.0982838, z: -0.5632169}
+    m_Value: {x: 58.23305, y: -2.2244923, z: -4.116186}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1148,13 +1148,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 1
   m_Rotation:
-    m_Target: {x: 0.049507026, y: -0.74619675, z: -0.055839073, w: -0.6616023}
+    m_Target: {x: -0.026481042, y: -0.71298087, z: 0.026975868, w: -0.7002369}
     speed: 2
-    m_Value: {x: 0.03337252, y: 0.72201675, z: -0.0349054, w: 0.6902247}
+    m_Value: {x: 0.026481042, y: 0.71298087, z: -0.026975868, w: 0.700237}
   m_Size:
-    m_Target: 0.5047438
+    m_Target: 29.753527
     speed: 2
-    m_Value: 10
+    m_Value: 29.753527
   m_Ortho:
     m_Target: 0
     speed: 2

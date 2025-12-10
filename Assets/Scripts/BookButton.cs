@@ -9,8 +9,6 @@ public class BookButton : MonoBehaviour
 
     TextMeshProUGUI bookTitleText;
 
-    UEPub.UEPubReader epubFile;
-
     public UnityEvent onBookSelected = new UnityEvent();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
