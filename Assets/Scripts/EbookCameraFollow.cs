@@ -96,7 +96,7 @@ public class EbookCameraFollow : MonoBehaviour
         prevPrimary = primary;
     }
 
-    void PositionInFront()
+    public void PositionInFront()
     {
         if (cameraTransform == null) return;
 
