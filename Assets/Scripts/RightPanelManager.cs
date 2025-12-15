@@ -17,12 +17,15 @@ public class RightPanelManager : MonoBehaviour
     public enum PanelState
     {
         Default,
-        BookSelected
+        BookSelected,
+        SoundSelected
     }
 
     private PanelState currentState = PanelState.Default;
 
     public static UnityEvent onReadButtonPressed = new UnityEvent();
+
+    public static UnityEvent onSoundButtonPressed = new UnityEvent();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,6 +35,8 @@ public class RightPanelManager : MonoBehaviour
 
         //Subscribe to the BookButton's event to update the right panel when a book is selected
         BookButton.onBookSelected.AddListener(UpdateRightPanelForBook);
+
+        SoundButton.onSoundButtonPressed.AddListener(UpdateRightPanelForSound);
 
         startButton.onClick.AddListener(OnStartButtonPressed);
     }
@@ -46,6 +51,23 @@ public class RightPanelManager : MonoBehaviour
         //Enable the start button when a book is selected
         startButton.interactable = true;
         currentState = PanelState.BookSelected;
+
+        startButton.GetComponentInChildren<TextMeshProUGUI>().text = "Read";
+    }
+
+    void UpdateRightPanelForSound()
+    {
+        Debug.Log("Updating Right Panel with selected sound info.");
+        //Update the right panel with the selected sound's information
+        titleText.text = AudioManager.Instance.nextSoundName;
+        // Here you could set an image related to the sound if available
+        image.sprite = null; // Placeholder, as we don't have a sound image yet
+
+        // Disable the start button when a sound is selected
+        startButton.interactable = true;
+        currentState = PanelState.SoundSelected;
+
+        startButton.GetComponentInChildren<TextMeshProUGUI>().text = "Play";
     }
 
     public void OnStartButtonPressed()
@@ -56,6 +78,12 @@ public class RightPanelManager : MonoBehaviour
 
             onReadButtonPressed.Invoke();
             Debug.Log("Start Button Pressed: Opening Ebook Canvas for " + BookManager.instance.bookDisplayTitle);
+        }
+        else if (currentState == PanelState.SoundSelected)
+        {
+            //Play the selected sound
+            AudioManager.Instance.PlayNextSound();
+            Debug.Log("Start Button Pressed: Playing Sound " + AudioManager.Instance.nextSoundName);
         }
     }
 
