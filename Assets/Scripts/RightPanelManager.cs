@@ -61,7 +61,7 @@ public class RightPanelManager : MonoBehaviour
         //Update the right panel with the selected sound's information
         titleText.text = AudioManager.Instance.nextSoundName;
         // Here you could set an image related to the sound if available
-        image.sprite = null; // Placeholder, as we don't have a sound image yet
+        image.sprite = AudioManager.Instance.nextSoundImage.sprite;
 
         // Disable the start button when a sound is selected
         startButton.interactable = true;

@@ -1745,6 +1745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   nextSoundName: 
+  nextSoundImage: {fileID: 0}
   nextSoundClip: {fileID: 0}
   audioSource: {fileID: 490318289}
 --- !u!82 &490318289
@@ -3988,10 +3989,10 @@ RectTransform:
   - {fileID: 770873751}
   m_Father: {fileID: 2096188759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -50}
-  m_SizeDelta: {x: 150, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729805104
 MonoBehaviour:
@@ -4007,6 +4008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundButton
   soundName: Rainforest
   soundClip: {fileID: 8300000, guid: 824ab2dd3e2289b459ecc29b1f5b4ab3, type: 3}
+  soundImage: {fileID: 729805106}
   button: {fileID: 729805105}
 --- !u!114 &729805105
 MonoBehaviour:
@@ -4607,10 +4609,10 @@ RectTransform:
   - {fileID: 512529764}
   m_Father: {fileID: 2096188759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 253.7, y: -50}
-  m_SizeDelta: {x: 150, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075334393
 MonoBehaviour:
@@ -4626,6 +4628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundButton
   soundName: Ocean Waves
   soundClip: {fileID: 8300000, guid: d8dbdfb10f24c4f4f9331c0a2e45196e, type: 3}
+  soundImage: {fileID: 1075334395}
   button: {fileID: 1075334394}
 --- !u!114 &1075334394
 MonoBehaviour:

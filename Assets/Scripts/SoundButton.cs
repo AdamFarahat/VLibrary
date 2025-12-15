@@ -7,6 +7,8 @@ public class SoundButton : MonoBehaviour
     public string soundName;
 
     public AudioClip soundClip;
+
+    public Image soundImage;
     
     [SerializeField] private Button button;
 
@@ -19,7 +21,7 @@ public class SoundButton : MonoBehaviour
 
     private void OnSoundButtonClicked()
     {
-        AudioManager.Instance.PrepareNextSound(soundName, soundClip);
+        AudioManager.Instance.PrepareNextSound(soundName, soundClip, soundImage);
         onSoundButtonPressed.Invoke();
         Debug.Log("Sound Button Pressed: " + soundName);
     }

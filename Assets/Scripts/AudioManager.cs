@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
     public string nextSoundName;
+
+    public Image nextSoundImage;
 
     public AudioClip nextSoundClip;
 
@@ -22,10 +25,11 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     
-    public void PrepareNextSound(string soundName, AudioClip soundClip)
+    public void PrepareNextSound(string soundName, AudioClip soundClip, Image soundImage)
     {
         nextSoundName = soundName;
         nextSoundClip = soundClip;
+        nextSoundImage = soundImage;
         // Additional logic to handle the sound can be added here
     }
 
