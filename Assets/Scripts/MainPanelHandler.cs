@@ -7,6 +7,8 @@ public class MainPanelHandler : MonoBehaviour
     [SerializeField] GameObject SoundsPanel;
 
     [SerializeField] GameObject EnvironmentPanel;
+
+    [SerializeField] GameObject OptionsPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +18,7 @@ public class MainPanelHandler : MonoBehaviour
             LibraryPanel.SetActive(true);
             SoundsPanel.SetActive(false);
             EnvironmentPanel.SetActive(false);
+            OptionsPanel.SetActive(false);
         });
         ButtonEventHandler.Instance.onSoundsButtonClicked.AddListener(() =>
         {
@@ -23,6 +26,7 @@ public class MainPanelHandler : MonoBehaviour
             SoundsPanel.SetActive(true);
             LibraryPanel.SetActive(false);
             EnvironmentPanel.SetActive(false);
+            OptionsPanel.SetActive(false);
         });
         ButtonEventHandler.Instance.onEnvironmentButtonClicked.AddListener(() =>
         {
@@ -30,16 +34,20 @@ public class MainPanelHandler : MonoBehaviour
             EnvironmentPanel.SetActive(true);
             LibraryPanel.SetActive(false);
             SoundsPanel.SetActive(false);
+            OptionsPanel.SetActive(false);
+        });
+        ButtonEventHandler.Instance.OnOptionsButtonClicked.AddListener(() =>
+        {
+            Debug.Log("Options Button Clicked - handled in MainPanelHandler");
+            OptionsPanel.SetActive(true);
+            LibraryPanel.SetActive(false);
+            SoundsPanel.SetActive(false);
+            EnvironmentPanel.SetActive(false);
         });
 
         SoundsPanel.SetActive(false);
         EnvironmentPanel.SetActive(false);
         LibraryPanel.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        OptionsPanel.SetActive(false);
     }
 }

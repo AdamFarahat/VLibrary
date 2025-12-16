@@ -45,8 +45,8 @@ public class RightPanelManager : MonoBehaviour
     {
         Debug.Log("Updating Right Panel with selected book info.");
         //Update the right panel with the selected book's information
-        titleText.text = BookManager.instance.bookDisplayTitle;
-        image.sprite = BookManager.instance.bookDisplayImage.sprite;
+        titleText.text = BookManager.Instance.bookDisplayTitle;
+        image.sprite = BookManager.Instance.bookDisplayImage.sprite;
 
         //Enable the start button when a book is selected
         startButton.interactable = true;
@@ -77,7 +77,7 @@ public class RightPanelManager : MonoBehaviour
             //Open the ebook canvas to read the book
 
             onReadButtonPressed.Invoke();
-            Debug.Log("Start Button Pressed: Opening Ebook Canvas for " + BookManager.instance.bookDisplayTitle);
+            Debug.Log("Start Button Pressed: Opening Ebook Canvas for " + BookManager.Instance.bookDisplayTitle);
         }
         else if (currentState == PanelState.SoundSelected)
         {

@@ -34,9 +34,9 @@ public class BookButton : MonoBehaviour
     //When the button is pressed, it sends its information to the BookManager
     public void OnBookButtonPressed()
     {
-        BookManager.instance.bookDisplayImage.sprite = bookImage.sprite;
-        BookManager.instance.bookDisplayTitle = bookTitleText;
-        BookManager.instance.bookText = bookText;
+        BookManager.Instance.bookDisplayImage.sprite = bookImage.sprite;
+        BookManager.Instance.bookDisplayTitle = bookTitleText;
+        BookManager.Instance.bookText = bookText;
         Debug.Log("Book Button Pressed: " + bookTitleText);
         //Let the right panel know a book has been selected
         onBookSelected.Invoke();

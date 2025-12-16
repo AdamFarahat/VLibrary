@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class BookManager : MonoBehaviour
 {
     //Singleton that handles the book interactions and keeps the current information of the previously selected book.
-    public static BookManager instance;
+    public static BookManager Instance;
 
     public Image bookDisplayImage;
 
@@ -17,9 +17,9 @@ public class BookManager : MonoBehaviour
     private void Awake()
     {
         //Ensure only one instance of BookManager exists
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else

@@ -9,11 +9,15 @@ public class ButtonEventHandler : MonoBehaviour
     public UnityEvent onSoundsButtonClicked = new UnityEvent();
     public UnityEvent onEnvironmentButtonClicked = new UnityEvent();
 
+    public UnityEvent OnOptionsButtonClicked = new UnityEvent();
+
     [SerializeField] private Button libraryButton;
 
     [SerializeField] private Button soundsButton;
 
     [SerializeField] private Button environmentButton;
+
+    [SerializeField] private Button optionsButton;
 
     private void Awake()
     {
@@ -34,5 +38,6 @@ public class ButtonEventHandler : MonoBehaviour
         libraryButton.onClick.AddListener(() => onLibraryButtonClicked.Invoke());
         soundsButton.onClick.AddListener(() => onSoundsButtonClicked.Invoke());
         environmentButton.onClick.AddListener(() => onEnvironmentButtonClicked.Invoke());
+        optionsButton.onClick.AddListener(() => OnOptionsButtonClicked.Invoke());
     }
 }
